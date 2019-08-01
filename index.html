@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-fill-left.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -404,8 +411,7 @@
 
       
         
-          
-            <h2 id="1-终端常用命令"><a href="#1-终端常用命令" class="headerlink" title="1.终端常用命令"></a>1.终端常用命令</h2><ul>
+          <h2 id="1-终端常用命令"><a href="#1-终端常用命令" class="headerlink" title="1.终端常用命令"></a>1.终端常用命令</h2><ul>
 <li>md 创建目录</li>
 <li>rmdir(rd) 删除目录，目录内没有文档。</li>
 <li>echo on a.txt 创建空文件</li>
@@ -501,161 +507,20 @@
 <li><p>模板字符串</p>
 <ul>
 <li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// console.log('hello world'.includes('world',7));</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// let url = 'admin/index.php';</span></span><br><span class="line"><span class="comment">// console.log(url.startsWith('aadmin'));</span></span><br><span class="line"><span class="comment">// console.log(url.endsWith('phph'));</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>函数扩展</p>
-<ul>
-<li><p>参数默认值</p>
-</li>
-<li><p>参数结构赋值</p>
-<ul>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// function foo(&#123;uname='lisi',age=13&#125;=&#123;&#125;)&#123;</span></span><br><span class="line"><span class="comment">//     console.log(uname,age);</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// foo(&#123;uname:'zhangsan',age:15&#125;);</span></span><br></pre></td></tr></table></figure>
-</li>
 </ul>
-</li>
-<li><p>rest参数</p>
-<ul>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// rest参数（剩余参数）</span></span><br><span class="line"><span class="comment">// function foo(a,b,...param)&#123;</span></span><br><span class="line"><span class="comment">//     console.log(a);</span></span><br><span class="line"><span class="comment">//     console.log(b);</span></span><br><span class="line"><span class="comment">//     console.log(param);</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// foo(1,2,3,4,5);</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>扩展运算符</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 扩展运算符 ...</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a,b,c,d,e,f,g</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a + b + c + d + e + f + g);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// foo(1,2,3,4,5);</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</span><br><span class="line"><span class="comment">// foo.apply(null,arr);</span></span><br><span class="line">foo(...arr);</span><br><span class="line"><span class="comment">// 合并数组</span></span><br><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">let</span> arr3 = [...arr1,...arr2];</span><br><span class="line"><span class="built_in">console</span>.log(arr3);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>箭头函数</p>
-</li>
-<li><p>/* 无参无返回函数 */</p>
-</li>
-<li><p>ES6: 将function关键字使用 =&gt; 符号代替</p>
-</li>
-<li></li>
-</ul>
-</li>
-</ul>
-<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意点：形参小括号写在 箭头前面，无参时不能省略</span></span><br><span class="line"><span class="keyword">let</span> fn1 = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'开工大吉'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//注意点：形参小括号写在 箭头前面，无参时不能省略</span></span><br><span class="line"><span class="comment">// function foo()&#123;</span></span><br><span class="line"><span class="comment">//     console.log('hello');</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// foo();</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// let foo = () =&gt; console.log('hello');</span></span><br><span class="line"><span class="comment">// foo();</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//如果函数体只有一行，可以省掉大括号</span></span><br><span class="line">fn1 = <span class="function"><span class="params">()</span>=&gt;</span> <span class="built_in">console</span>.log(<span class="string">'开工大吉'</span>);</span><br><span class="line">fn1();</span><br></pre></td></tr></table></figure>
-
-注意事项:
-
-1、多个参数必须用小括号包住
-
-2、箭头函数中this取决于函数的定义，而不是调用
-
-3、箭头函数不可以new
-
-4、箭头函数不可以使用arguments获取参数列表，可以使用rest参数代替</code></pre><ul>
-<li>类与继承</li>
-</ul>
-<h2 id="5-Node模块化"><a href="#5-Node模块化" class="headerlink" title="5.Node模块化"></a>5.Node模块化</h2><p>在Node.js中没有window对象,没有DOM,BOM，但是有一个类似的对象global，访问全局成员的时候可以省略global</p>
-<p>Node js特点</p>
-<h3 id="1-模块化开发"><a href="#1-模块化开发" class="headerlink" title="1.模块化开发"></a>1.模块化开发</h3><p>  模块化相关的规则：</p>
-<p>​    1、如何定义模块：一个js文件就是一个模块，模块内部的成员都是相互独立(避免了命名冲突)</p>
-<p>​    2、模块成员的导出和引入</p>
-<p> 如果要导出单个的成员或者比较少的成员，一般我们使用exports导出；</p>
-<p>​    如果要导出的成员比较多，一般我们使用module.exports的方式</p>
-<p>​    这两种方式不能同时使用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(a) + <span class="built_in">parseInt</span>(b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出模块成员</span></span><br><span class="line">exports.sum = sum;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出成员的另一种方式</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hello'</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-fs文件模块-读写文件"><a href="#2-fs文件模块-读写文件" class="headerlink" title="2.fs文件模块(读写文件)"></a>2.fs文件模块(读写文件)</h3><ul>
-<li>在nodejs中如果想要进行文件操作,就必须引入 fs 这个核心模块</li>
-<li>在fs这个核心模块中,就提供了所有的文件操作相关的API</li>
-<li>通过读取到的文件其实都是二进制数据, 01 ,但是转化成了16进制</li>
-<li>可以通过 toString方法转化为我们看得懂的字符串</li>
-</ul>
-<h4 id="1-1-readFile读取文件"><a href="#1-1-readFile读取文件" class="headerlink" title="1.1-readFile读取文件"></a>1.1-readFile读取文件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入文件模块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.读取文件</span></span><br><span class="line"></span><br><span class="line">fs.readFile(<span class="string">'./data/aaa.txt'</span>,<span class="string">'utf-8'</span>,(err,data)=&gt;&#123;</span><br><span class="line"> * 第一个参数：文件路径</span><br><span class="line">   第二参数：文件编码 默认utf<span class="number">-8</span></span><br><span class="line"> * 第三参数：回调函数,接收两个参数</span><br><span class="line"> 				error ----</span><br><span class="line"> 						如果读取失败 error就是错误对象</span><br><span class="line"> 						如果读取成功 error就是<span class="literal">null</span></span><br><span class="line"> 				data -----</span><br><span class="line"> 						如果读取成功 data就是读取到的数据</span><br><span class="line"> 						如果读取失败error错误对象	</span><br><span class="line">                        <span class="comment">//通过err判断是或有错误发生</span></span><br><span class="line">    <span class="keyword">if</span>(err)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(读取失败)</span><br><span class="line">        <span class="comment">//抛出异常，throw的作用就是让node程序终止运行，方便调试</span></span><br><span class="line">        <span class="keyword">throw</span> err;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(读取成功</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'11111'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.同步读取文件(了解即可，几乎不用,一般在异步的api后面加上Sync就是同步)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> data = fs.readFileSync(<span class="string">'./data/aaa.txt'</span>,<span class="string">'utf-8'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(data);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'2222'</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-2-writeFile写入文件"><a href="#1-2-writeFile写入文件" class="headerlink" title="1.2-writeFile写入文件"></a>1.2-writeFile写入文件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入文件模块</span></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.写文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 第一个参数：要写入的文件路径</span></span><br><span class="line"><span class="comment"> * 第二个参数：要写入的内容/数据</span></span><br><span class="line"><span class="comment"> * 第三个参数：文件编码 默认utf-8</span></span><br><span class="line"><span class="comment"> * 第四个参数： 异步回调函数</span></span><br><span class="line"><span class="comment">    * err:  如果成功，err为null.</span></span><br><span class="line"><span class="comment">    	    如果失败就是错误对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">fs.writeFile(<span class="string">'./data/bbb.txt'</span>,<span class="string">'黑马程序员'</span>,<span class="string">'utf-8'</span>,(err)=&gt;&#123;</span><br><span class="line">    <span class="keyword">if</span>(error)&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'写入失败'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'写入成功'</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-同步与异步区别"><a href="#6-同步与异步区别" class="headerlink" title="6.同步与异步区别"></a>6.同步与异步区别</h2><ul>
-<li>同步会有阻塞线程,异步不会</li>
-<li>同步有序执行,异步无序执行</li>
-<li>同步没有回调函数,异步有</li>
-</ul>
-<p><strong>js从上解析代码流程</strong></p>
-<ol>
-<li>判断是同步还是异步</li>
-<li>如果是同步则立即执行</li>
-<li>如果是异步则不执行,而是放入事件玄幻中(Event Loop)</li>
-<li>所有代码解析完毕之后,开始执行使劲循环中的异步代码</li>
-</ol>
-<p>nodejs 异步执行的任务;</p>
-<ol>
-<li>文件 I / o</li>
-<li>网络 I / o</li>
-</ol>
-<h2 id="7-http模块-搭建服务器"><a href="#7-http模块-搭建服务器" class="headerlink" title="7.http模块(搭建服务器)"></a>7.http模块(搭建服务器)</h2><ul>
-<li>搭建一个服务器的目的是服务器可以提供对数据的鼓舞</li>
-<li>可以通过使用createServer( ) 方法构建一个web服务器</li>
-</ul>
-<p>步骤:</p>
-<p><strong>1</strong>.<strong>导入模块</strong></p>
-<p>要使用 HTTP 服务器和客户端，必须 require(‘http’)</p>
-<p><em>const</em> http = require(‘http’);</p>
-<p><strong>2</strong>.<strong>创建服务器</strong></p>
-<p>使用createServer()方法构建一个web服务器,返回一个Server实例</p>
-<p>  参数：回调函数</p>
-<p>​        req:request  客户端请求的数据</p>
-<p>​        res:response 服务端响应的数据</p>
-<p><strong>3</strong>.<strong>启动服务器</strong></p>
-<h3 id="1-1-http-模块搭建服务器"><a href="#1-1-http-模块搭建服务器" class="headerlink" title="1.1-http 模块搭建服务器"></a>1.1-http 模块搭建服务器</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入模块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.创建服务器</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*createServer 相当于安装了 phpStudy中的Apache</span></span><br><span class="line"><span class="comment">    参数：回调函数</span></span><br><span class="line"><span class="comment">        req:request  客户端请求的数据</span></span><br><span class="line"><span class="comment">        res:response 服务端响应的数据</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">let</span> server = http.createServer(<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">//服务端每收到一个客户端请求都会执行一次该回调函数，这个函数会执行多次</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//req.url:获取客户端请求的路径</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'客户端请求的数据'</span> + req.url);</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.启动服务器（相当于点击了phpStuty的开启按钮）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">第一个参数：端口号</span></span><br><span class="line"><span class="comment">第二个参数：ip地址   默认不写，就是本机ip（127.0.0.1）</span></span><br><span class="line"><span class="comment">第三个参数 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="string">'127.0.0.1'</span>,(err)=&gt;&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(<span class="string">'服务器启动成功'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-响应客户端请求"><a href="#1-2-响应客户端请求" class="headerlink" title="1.2-响应客户端请求"></a>1.2-响应客户端请求</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入HTTP模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.创建服务器</span></span><br><span class="line"><span class="keyword">let</span> server = http.createServer(<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">//服务器每收到一次请求都会调用一次这个函数</span></span><br><span class="line">    <span class="comment">//req:负责接收客户端请求</span></span><br><span class="line">    <span class="comment">//res:负责响应客户端请求</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* 注意：服务器响应给客户端只能是两种数据类型： 一：文本  二：二进制  否则程序报错 */</span></span><br><span class="line">    res.end(<span class="string">'hello world'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.开启服务器</span></span><br><span class="line">server.listen(<span class="number">3000</span>,(err)=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'服务器开启成功'</span>); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-根据不同请求响应不同数据"><a href="#1-3-根据不同请求响应不同数据" class="headerlink" title="1.3-根据不同请求响应不同数据"></a>1.3-根据不同请求响应不同数据</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入HTTP模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.创建服务器</span></span><br><span class="line"><span class="keyword">let</span> server = http.createServer(<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">//服务器每收到一次请求都会调用一次这个函数</span></span><br><span class="line">    <span class="comment">//req:负责接收客户端请求</span></span><br><span class="line">    <span class="comment">//res:负责响应客户端请求</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">console</span>.log(req.url);<span class="comment">//获取到的内容是127.0.0.1：3000后面的内容，url路径通常以'/'开头</span></span><br><span class="line">    <span class="keyword">if</span>(req.url == <span class="string">'/a'</span>)&#123;</span><br><span class="line">        res.end(<span class="string">'hello world'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(req.url == <span class="string">'/login'</span>)&#123;<span class="comment">//</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置服务器响应头： 作用：服务端告诉客户端，我响应给你的数据是什么类型</span></span><br><span class="line">        res.writeHead(<span class="number">200</span>,&#123;</span><br><span class="line">            <span class="string">'Content-Type'</span>:<span class="string">'text/plain;charset=utf8'</span>   <span class="comment">//text/plain:普通文本</span></span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        res.end(<span class="string">'这是登录页'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(req.url == <span class="string">'/'</span>)&#123; <span class="comment">//如果本次没有请求路径（127.0.0.1：3000），通常表示首页</span></span><br><span class="line">        </span><br><span class="line">        res.writeHead(<span class="number">200</span>,&#123;</span><br><span class="line">            <span class="string">'Content-Type'</span>:<span class="string">'text/html;charset=utf8'</span>   <span class="comment">//text/html文本</span></span><br><span class="line">        &#125;);</span><br><span class="line">        res.end(<span class="string">'&lt;h1&gt;这是首页&lt;/h1&gt;'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//如果客户端请求了服务端无法识别的路径，一般响应404</span></span><br><span class="line">        res.end(<span class="string">'404 not found'</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.开启服务器</span></span><br><span class="line">server.listen(<span class="number">3000</span>,()=&gt;&#123;</span><br><span class="line">  </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'服务器开启成功'</span>);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-4-http响应客户端HTML文件"><a href="#1-4-http响应客户端HTML文件" class="headerlink" title="1.4-http响应客户端HTML文件"></a>1.4-http响应客户端HTML文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入http模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.创建服务器</span></span><br><span class="line"><span class="keyword">let</span> server = http.createServer(<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(req.url);</span><br><span class="line">    <span class="comment">//一般情况下，如果返回的是文件二进制数据，浏览器会自动识别文件格式解析加载</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(req.url == <span class="string">'/'</span>)&#123;<span class="comment">//  请求路径为/，返回首页</span></span><br><span class="line">        fs.readFile(<span class="string">'./data/index.html'</span>,(err,data)=&gt;&#123;</span><br><span class="line">            <span class="keyword">if</span>(err)&#123;</span><br><span class="line">                <span class="keyword">throw</span> err;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(data);</span><br><span class="line">                res.end(data);</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(req.url == <span class="string">'/login.html'</span>)&#123;</span><br><span class="line">        fs.readFile(<span class="string">'./data/login.html'</span>,(err,data)=&gt;&#123;</span><br><span class="line">            <span class="keyword">if</span>(err)&#123;</span><br><span class="line">                <span class="keyword">throw</span> err;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                res.end(data);</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(req.url == <span class="string">'/image.jpg'</span>)&#123;</span><br><span class="line">        fs.readFile(<span class="string">'./data/image.jpg'</span>,(err,data)=&gt;&#123;</span><br><span class="line">            <span class="keyword">if</span>(err)&#123;</span><br><span class="line">                <span class="keyword">throw</span> err;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                res.end(data);</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        res.end(<span class="string">'404 not found'</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.开启服务器</span></span><br><span class="line">server.listen(<span class="number">3000</span>,(err)=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'服务器启动成功'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="8-Nodejs路径"><a href="#8-Nodejs路径" class="headerlink" title="8.Nodejs路径"></a>8.Nodejs路径</h2><ul>
-<li><p>node中的相对路径： ./  不是相对于当前文件所在路径，而是相对于执行node命名的文件夹路径</p>
-<p>在服务端开发中，一般不要使用相对路径，而使用绝对路径</p>
-</li>
-<li><p>解决方案：在nodejs中，每一个js文件都有两个全局属性，它可以帮助我们获取到文件的绝对路径</p>
-<ul>
-<li>__filename:当前js文件所在目录的绝对路径</li>
-<li>__dirmame:当前js文件的绝对路径</li>
-</ul>
-</li>
-</ul>
-<p>console.log(<strong>dirname);<br>console.log(</strong>filename);</p>
-<h2 id="buffer对象"><a href="#buffer对象" class="headerlink" title="buffer对象"></a>buffer对象</h2><p>buffer是一个缓冲区,主要用于操作二进制的数据流,用法跟数组非常的相识</p>
-<h3 id="1-创建一个buffer实例"><a href="#1-创建一个buffer实例" class="headerlink" title="1.创建一个buffer实例"></a>1.创建一个buffer实例</h3><p>使用new操作符,有四种方法创建一个Buffer实例</p>
-<ul>
-<li>new Buffer(size)，创建一个指定大小的buffer</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var buf = new Buffer(10);</span><br><span class="line">console.log(buf); //&lt;Buffer 00 00 00 00 00 00 00 00 00 00&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>new Buffer(array)，根据一个字节数组来创建一个buffer</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var bf=new Buffer([1,2,3]);</span><br><span class="line">console.log(bf); //&lt;Buffer 01 02 03&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>new Buffer(str[,encoding])，根据一个字符串和编码格式创建buffer，不指定编码时默认使用utf8</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var bf1=new Buffer(&apos;miao&apos;,&apos;utf-8&apos;);</span><br><span class="line">console.log(bf1);</span><br><span class="line">for(var i=0;i&lt;bf1.length;i++)&#123;</span><br><span class="line">    console.log(String.fromCharCode(bf1[i]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>new Buffer(buffer)，根据buffer实例创建一个新的buffer</li>
-</ul>
-<h4 id="buf-write-方法"><a href="#buf-write-方法" class="headerlink" title="buf.write()方法"></a>buf.write()方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">buf.write(string[, offset][, length][, encoding]) //往Buffer对象中写入数据</span><br></pre></td></tr></table></figure>
-
-<p>uf.write用来向缓冲区中写入一个字符串，返回实际写入的字节数。参数含义如下：</p>
-<ul>
-<li>string，待写入的字符串对象</li>
-<li>offset，缓冲区偏移量，指定的话就从这个位置开始写入，不指定就默认为0</li>
-<li>length，要写入的字节数</li>
-<li>encoding，代谢如字符串的编码格式，默认为utf8</li>
-</ul>
-<h4 id="buf-toString-方法"><a href="#buf-toString-方法" class="headerlink" title="buf.toString()方法"></a>buf.toString()方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">buf.toString([encoding], [start], [end]) // 根据 encoding参数（默认是 &apos;utf8&apos;）返回一个解码的 string 类型</span><br><span class="line"></span><br><span class="line">var bf=new Buffer(&quot;xiaoxu&quot;);</span><br><span class="line">console.log(bf);</span><br><span class="line">console.log(bf.toString());</span><br><span class="line"></span><br><span class="line">var bf2=new Buffer(&quot;小徐&quot;);</span><br><span class="line">console.log(bf2);</span><br><span class="line">console.log(bf2.toString(&apos;utf-8&apos;,3));</span><br></pre></td></tr></table></figure>
-
-<p>如果不知道开始位置，则将字符全部返回，如果指定了开始位置和结束位置则按指定的返回，在上面实例中，因为一个中文占3个字节，所以在bf2这个实例中，我们指定从第三个位置开始，则返回的是徐这个汉字</p>
-<h4 id="buf-toJSON"><a href="#buf-toJSON" class="headerlink" title="buf.toJSON()"></a>buf.toJSON()</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//返回一个 JSON表示的Buffer实例。JSON.stringify将会默认调用来字符串序列化这个Buffer实例</span><br></pre></td></tr></table></figure>
-
-<h4 id="buf-slice-方法"><a href="#buf-slice-方法" class="headerlink" title="buf.slice()方法"></a>buf.slice()方法</h4><p>buf.slice([start], [end]) ://返回一个新的buffer，这个buffer将会和老的buffer引用相同的内存地址，注意：修改这个新的buffer实例slice切片，也会改变原来的buffer</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/01/nodejs笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
