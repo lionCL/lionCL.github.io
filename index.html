@@ -411,109 +411,7 @@
 
       
         
-          <h2 id="1-终端常用命令"><a href="#1-终端常用命令" class="headerlink" title="1.终端常用命令"></a>1.终端常用命令</h2><ul>
-<li>md 创建目录</li>
-<li>rmdir(rd) 删除目录，目录内没有文档。</li>
-<li>echo on a.txt 创建空文件</li>
-<li>del 删除文件</li>
-<li>rm 文件名 删除文件</li>
-<li>cat 文件名 查看文件内容</li>
-<li>cat &gt; 文件名 向文件中写上内容。</li>
-</ul>
-<h2 id="2-nvm常用的命令"><a href="#2-nvm常用的命令" class="headerlink" title="2.nvm常用的命令"></a>2.nvm常用的命令</h2><ul>
-<li>nvm list 查看当前安装的Node.js所有版本</li>
-<li>nvm install 版本号 安装指定版本的Node.js</li>
-<li>nvm uninstall 版本号 卸载指定版本的Node.js</li>
-<li>nvm use 版本号 选择指定版本的Node.js</li>
-</ul>
-<h2 id="2-什么是nodejs"><a href="#2-什么是nodejs" class="headerlink" title="2.什么是nodejs"></a>2.什么是nodejs</h2><ul>
-<li>1.Node 是一个构建于 Chrome V8引擎之上的一个Javascript运行环境<ul>
-<li>Node是一个运行环境，作用是让js拥有开发服务端的功能</li>
-</ul>
-</li>
-<li>2.Node使用事件驱动、非阻塞IO模型（异步读写）使得它非常的轻量级和高效<ul>
-<li>Node中绝大多数API都是异步（类似于ajax），目的是提高性能</li>
-</ul>
-</li>
-<li>3.Node中的<code>NPM</code>是世界上最大的开源库生态系统（类似于github）<ul>
-<li>NMP官网:<a href="https://www.npmjs.com" target="_blank" rel="noopener">https://www.npmjs.com</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-服务端js与客户端js区别"><a href="#3-服务端js与客户端js区别" class="headerlink" title="3.服务端js与客户端js区别"></a>3.服务端js与客户端js区别</h2><ul>
-<li>1.客户端JS由三部分组成<ul>
-<li>ECMAScript：确定js的语法规范</li>
-<li>DOM：js操作网页内容</li>
-<li>BOM：js操作浏览器窗口</li>
-</ul>
-</li>
-<li>2.服务端JS只有ECMAScript<ul>
-<li>因为服务端是没有界面的<ul>
-<li>==在nodejs中使用dom与bom的api程序会报错==</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-ES6语法新特性"><a href="#4-ES6语法新特性" class="headerlink" title="4.ES6语法新特性"></a>4.ES6语法新特性</h2><p><strong>变量声明</strong>let与const</p>
-<ul>
-<li>let声明的变量不存在预解析</li>
-<li>let声明的变量不允许重复（在同一个作用域内）</li>
-<li>块内部定义的变量，在外部是不可以访问的</li>
-<li>for循环括号中声明的变量只能在循环体中使用</li>
-<li>在块级作用域内部，变量只能先声明再使用</li>
-</ul>
-<ul>
-<li>const用来声明常量</li>
-<li>const声明的常量不允许重新赋值</li>
-<li>const声明的常量必须初始化</li>
-</ul>
-<ul>
-<li><p>变量的解构赋值</p>
-<ul>
-<li>数组解构赋值</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数组的解构赋值</span></span><br><span class="line"><span class="comment">// let [a,b,c] = [1,2,3];</span></span><br><span class="line"><span class="comment">// let [a,b,c] = [,123,];</span></span><br><span class="line"><span class="comment">// let [a=111,b,c] = [,123,];</span></span><br><span class="line"><span class="comment">// console.log(a,b,c);</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>对象解构赋值</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对象的解构赋值</span></span><br><span class="line"><span class="comment">// let &#123;foo,bar&#125; = &#123;foo : 'hello',bar : 'hi'&#125;;</span></span><br><span class="line"><span class="comment">// let &#123;foo,bar&#125; = &#123;bar : 'hi',foo : 'hello'&#125;;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 对象属性别名(如果有了别名，那么原来的名字就无效了)</span></span><br><span class="line"><span class="comment">// let &#123;foo:abc,bar&#125; = &#123;bar : 'hi',foo : 'nihao'&#125;;</span></span><br><span class="line"><span class="comment">// console.log(foo,bar</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>字符串解构赋值</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串的解构赋值</span></span><br><span class="line"><span class="comment">// let [a,b,c,d,e,length] = "hello";</span></span><br><span class="line"><span class="comment">// console.log(a,b,c,d,e);</span></span><br><span class="line"><span class="comment">// console.log(length);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log("hello".length);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// let &#123;length&#125; = "hi";</span></span><br><span class="line"><span class="comment">// console.log(length);</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>字符串扩展</p>
-<ul>
-<li><p>includes()</p>
-<ul>
-<li>判断字符串中是否包含指定的字串（有的话返回true，否则返回false）\</li>
-<li>参数一：匹配的字串</li>
-<li>参数二：从第几个开始匹配</li>
-</ul>
-</li>
-<li><p>startsWith()</p>
-<ul>
-<li>判断字符串是否以特定的字串开始</li>
-</ul>
-</li>
-<li><p>endsWith()</p>
-<ul>
-<li>判断字符串是否以特定的字串结束</li>
-</ul>
-</li>
-<li><p>模板字符串</p>
-<ul>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// console.log('hello world'.includes('world',7));</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// let url = 'admin/index.php';</span></span><br><span class="line"><span class="comment">// console.log(url.startsWith('aadmin'));</span></span><br><span class="line"><span class="comment">// console.log(url.endsWith('phph'));</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+          <h1 id="nodejs的一些笔记心得"><a href="#nodejs的一些笔记心得" class="headerlink" title="nodejs的一些笔记心得"></a>nodejs的一些笔记心得</h1>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/01/nodejs笔记/#more" rel="contents">
@@ -859,7 +757,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">程磊</span>
+  <span class="author" itemprop="copyrightHolder">lionCL</span>
 
   
 </div>
